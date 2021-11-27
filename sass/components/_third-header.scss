@@ -1,0 +1,70 @@
+// --------------------------- MOBILE ------------------------------ //
+.third-header{
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color:var(--third-color);
+
+&--footer{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    }
+
+&--form{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    }
+}
+
+// --------------------------- TABLET ------------------------------ //
+
+@media screen and (min-width: 768px) and (max-width: 1999px){
+    .third-header{
+
+    &--form{
+    margin-top: 118px;
+    }
+
+    }
+}
+
+// --------------------------- DESKTOP ------------------------------ //
+
+@media screen and (min-width: 1200px){
+    .third-header{
+
+    &--footer{
+    display: inline-block;
+
+    }
+
+    &--form{
+    margin-top: 0;
+    justify-content: flex-start;
+    padding-left: 78px;
+    }
+}
+}
+
+/*
+.third-header{
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color:var(--third-color);
+
+    &--footer{
+    padding-bottom: 20px;
+    }
+
+    &--form{
+    margin-left: 78px;
+    padding-top: 12px;
+    padding-bottom: 20px;
+    }
+}
+*/

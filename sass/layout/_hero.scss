@@ -1,0 +1,267 @@
+
+// --------------------------- MOBILE ------------------------------ //
+
+// reguły dla nagłówka //
+
+.hero-up__header{
+font-weight: 900;
+font-size: 26px;
+line-height: 1.615;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+color:var(--third-color);
+margin-left: auto;
+margin-right: auto;
+padding-top: 118px;
+margin-bottom: 30px;
+max-width: 365px;
+text-align: center;
+}
+
+// reguły dla przycisku w sekcji hero //
+
+.modal-btn{
+font-weight: 700;
+font-size: 16px;
+letter-spacing: 0.06em;
+background-color: var(--secondary-color);
+color:var(--third-color);
+cursor: pointer;
+display: block;
+padding: 16px 42px;
+margin-left: auto;
+margin-right: auto;
+border-radius: 4px;
+border-style: none;
+}
+
+// reguł dla kontenera trzymającego grafiki //
+.hero-down__icon-container{
+    width:100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color:#F5F4FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+ // reguły dla nagłówka //
+
+.hero-down__header{
+display: block;
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+text-align: center;
+}
+
+// reguły dla opisu //
+
+.hero-down__description{
+font-size: 14px;
+line-height: 1.714;
+letter-spacing: 0.03em;
+color:var(--forth-color);
+width: 100%;
+margin-top: 10px;
+margin-bottom: 30px;
+
+    &--mobile{
+    margin-bottom: 0;
+    }
+}
+
+// --------------------------- TABLET ------------------------------ //
+
+@media screen and (min-width:768px) and (max-width: 1999px){
+
+
+// reguły dla nagłówka //
+
+    .hero-down__header{
+    display: inline;
+    text-align: left;
+    }
+
+// reguły dla kontenera trzymającego grafiki //
+
+    .hero-down__icon-container{
+    width:354px;
+    }
+
+    // reguły dla listy //
+
+    .hero-down__list{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    }
+
+
+    // reguły dla opisu //
+
+    .hero-down__description{
+    width: 354px;
+
+        &--tablet{
+        margin-bottom: 0;
+        }
+    }
+}
+
+// --------------------------- DESKTOP ------------------------------ //
+@media screen and (min-width: 1200px){
+
+    // reguły dla nagłówka //
+
+.hero-up__header{
+font-weight: 900;
+font-size: 44px;
+line-height: 1.363;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+color:var(--third-color);
+margin-left: auto;
+margin-right: auto;
+padding-top: 200px;
+margin-bottom: 30px;
+max-width: 676px;
+text-align: center;
+}
+
+// reguły dla przycisku w sekcji hero //
+
+.modal-btn{
+font-weight: 700;
+font-size: 16px;
+letter-spacing: 0.06em;
+background-color: var(--secondary-color);
+color:var(--third-color);
+cursor: pointer;
+display: block;
+padding: 16px 42px;
+margin-left: auto;
+margin-right: auto;
+border-radius: 4px;
+border-style: none;
+}
+
+// reguł dla kontenera trzymającego tekst i grafiki //
+.hero-down__icon-container{
+    max-width:270px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color:#F5F4FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+// reguły dla nagłówka //
+.hero-down__header{
+display: block;
+height: 16px;
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+}
+
+.hero-down__description{
+font-size: 14px;
+line-height: 1.714;
+letter-spacing: 0.03em;
+color:var(--forth-color);
+width: 270px;
+margin-top: 10px;
+}
+
+.hero-down__list{
+    display: flex;
+    column-gap: 30px;
+}
+
+
+}
+/*
+
+// reguły dla nagłówka //
+
+.hero-up__header{
+font-weight: 900;
+font-size: 44px;
+line-height: 1.363;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+color:var(--third-color);
+margin-left: auto;
+margin-right: auto;
+padding-top: 200px;
+margin-bottom: 30px;
+width: 676px;
+text-align: center;
+}
+
+// reguły dla przycisku w sekcji hero //
+
+.modal-btn{
+font-weight: 700;
+font-size: 16px;
+letter-spacing: 0.06em;
+background-color: var(--secondary-color);
+color:var(--third-color);
+cursor: pointer;
+display: block;
+padding: 16px 42px;
+margin-left: auto;
+margin-right: auto;
+border-radius: 4px;
+border-style: none;
+}
+
+// reguł dla kontenera trzymającego tekst i grafiki //
+.hero-down__icon-container{
+    width:270px;
+    height:120px;
+    background-color:#F5F4FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+ // reguły dla nagłówka //
+.hero-down__header{
+display: block;
+height: 16px;
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+}
+
+// reguły dla opisu //
+.hero-down__description{
+font-size: 14px;
+line-height: 1.714;
+letter-spacing: 0.03em;
+color:var(--forth-color);
+width: 270px;
+margin-top: 10px;
+}
+
+// reguły dla listy //
+
+.hero-down__list{
+    display: flex;
+    column-gap: 30px;
+}
+
+*/

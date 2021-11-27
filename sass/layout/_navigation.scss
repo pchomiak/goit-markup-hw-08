@@ -1,0 +1,132 @@
+// --------------------------- MOBILE ------------------------------ //
+
+.navigation {
+  &__list {
+    display: none;
+  }
+}
+
+// --------------------------- TABLET ------------------------------ //
+
+@media screen and (min-width: 768px) and (max-width: 1999px){
+  .navigation {
+    display: flex;
+    align-items: center;
+
+    &__list {
+      display: flex;
+      column-gap: 60px;
+    }
+  }
+
+  // reugły dla linków w nav //
+
+  .navigation__link {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: var(--main-color);
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+
+    &:hover,
+    &:focus {
+      color: var(--secondary-color);
+      fill: var(--secondary-color);
+    }
+
+    &--current {
+      color: var(--secondary-color);
+
+      &::after {
+        content: '';
+        display: block;
+        width: 53px;
+        height: 4px;
+        background-color: var(--secondary-color);
+        position: absolute;
+        top: 46px;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+// --------------------------- DESKTOP ------------------------------ //
+
+@media screen and (min-width: 1200px) {
+  .navigation {
+
+    &__list {
+      align-items: center;
+      column-gap: 46px;
+    }
+  }
+
+  .navigation__link {
+    
+    &:hover,
+    &:focus {
+      color: var(--secondary-color);
+      fill: var(--secondary-color);
+    }
+
+    &--current {
+      color: var(--secondary-color);
+
+      &:after {
+        top: 43px;
+      }
+    }
+  }
+}
+
+/* .navigation{
+    display:flex;
+
+    &__list{
+    display:flex;
+    align-items: center;
+    column-gap: 46px;
+    }
+}
+
+// reugły dla linków w nav //
+
+.navigation__link{
+font-weight: 500;
+font-size: 14px;
+letter-spacing: 0.02em;
+color:var(--main-color);
+text-decoration: none;
+transition-property: color;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+position: relative;
+
+    &:hover,&:focus{
+        color:var(--secondary-color);
+        fill:var(--secondary-color);
+    }
+
+    &--current{
+    color:var(--secondary-color);
+
+        &::after{
+        content:"";
+        display: block;
+        width: 53px;
+        height: 4px;
+        background-color: var(--secondary-color);
+        position: absolute;
+        top:44px;
+        border-radius: 2px;
+        left:2px;
+        }
+    }
+}
+
+*/

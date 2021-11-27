@@ -1,0 +1,119 @@
+// --------------------------- MOBILE ------------------------------ //
+
+// reguły dla listy pracowników //
+.employees{
+    display: flex;
+    flex-direction: column;
+
+    &__img{
+    display: block;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    width:100%;
+    }
+}
+
+// reguły dla wrappera //
+
+.employees-wrapper{
+    background-color: var(--third-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    margin-bottom: 30px;
+
+    &__name{
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 10px;
+    }
+
+    &__job{
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    color:var(--forth-color);
+    text-align: center;
+    padding-bottom: 16px;
+    }
+}
+
+.employees-social{
+    display:flex;
+    padding-bottom: 24px;
+    justify-content: center;
+
+}
+
+// --------------------------- TABLET I DESKTOP ------------------------------ //
+
+@media screen and (min-width:768px){
+
+.employees{
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 30px;
+
+    &__img{
+    display: block;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+}
+
+}
+/*
+// reguły dla listy pracowników //
+
+.employees{
+    display: flex;
+    column-gap: 30px;
+
+    &__img{
+    display: block;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+}
+
+
+// reguły dla wrappera //
+
+.employees-wrapper{
+    background-color: var(--third-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
+
+    &__name{
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 10px;
+    }
+
+    &__job{
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    color:var(--forth-color);
+    text-align: center;
+    padding-bottom: 16px;
+    }
+}
+
+
+
+// reguły dla listy mediów społecznościowych //
+
+.employees-social{
+    display:flex;
+    padding-bottom: 30px;
+    
+
+    &__item:first-child{
+    margin-left: 30px;
+    }
+}
+*/
+
+
+

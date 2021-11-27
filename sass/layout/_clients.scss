@@ -1,0 +1,112 @@
+// --------------------------- MOBILE ------------------------------ //
+
+.clients-container{
+    min-width:210px;
+    height:92px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #AFB1B8;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus{
+    border-color: var(--secondary-color);
+    cursor: pointer;
+
+        .clients-container__logo{
+            fill:var(--secondary-color);
+        }
+    }
+}
+
+//reguły dla listy //
+
+.clients{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-content: center;
+}
+
+//reguły dla loga klientów //
+
+.clients-container__logo{
+    fill:#AFB1B8;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+// --------------------------- TABLET ------------------------------ //
+
+@media screen and (min-width:768px) and (max-width: 1999px){
+    .clients-container{
+    min-width:226px;
+    }
+}
+
+// --------------------------- DESKTOP ------------------------------ //
+
+@media screen and (min-width:1200px){
+    .clients-container{
+    min-width:170px;
+    }
+
+    .clients{
+    flex-wrap: initial;
+    justify-content: space-between;
+}
+}
+
+/*
+
+// reguły dla kontenera //
+
+.clients-container{
+    width:170px;
+    height:92px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #AFB1B8;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus{
+    border-color: var(--secondary-color);
+    cursor: pointer;
+
+        .clients-container__logo{
+            fill:var(--secondary-color);
+        }
+    }
+}
+
+//reguły dla listy //
+
+.clients{
+    display: flex;
+    justify-content: space-between;
+}
+
+//reguły dla loga klientów //
+
+.clients-container__logo{
+    fill:#AFB1B8;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*/

@@ -1,0 +1,459 @@
+// --------------------------- MOBILE ------------------------------ //
+.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+// główne okno //
+
+.modal{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--third-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    width:100%;
+    max-width: 528px;
+    transition: transform 1s ease-out;
+    padding: 20px;
+
+    .is-hidden &{
+     transform: translate(-200%,-200%);
+    }
+
+    &__close-btn{
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: var(--third-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    padding: 9px 9px 10px 10px;
+    line-height: 0;
+    border-radius: 50%;
+    transition-property: fill;
+    transition-duration: 250ms;
+    z-index: 99;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover, &:focus{
+        fill:var(--secondary-color);
+        }
+    }
+
+    &__header{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 370px;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    }
+
+    &__form{
+    display: flex;
+    flex-direction: column;
+    }
+
+    &-button{
+    background-color: var(--secondary-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    color:var(--third-color);
+    border: none;
+    padding:0;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    padding:16px 65px;
+
+        // ikona dla przycisku w footerze //
+        &__icon{
+        margin-left: 24px;
+        }
+    }
+
+    &__link{
+    color:var(--secondary-color);
+    }
+}
+
+// reguła dla wrappera //
+
+.modal-input-wrapper{
+    position: relative;
+    width:100%;
+
+    &__input{
+    width:100%;
+    padding-top:11px;
+    padding-bottom:11px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    transition-property: border-color,color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:focus{
+        outline:none;
+        border-color: var(--secondary-color);
+        }
+
+    }
+
+
+    &__icon{
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        .modal-input-wrapper__input:focus + &{
+        fill:var(--secondary-color);
+        }
+    }
+}
+
+// reguła dla opisu inputa //
+
+.modal__label{
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    color: var(--forth-color);
+    margin-bottom: 4px;
+    margin-top: 10px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:first-child{
+    color: var(--secondary-color);
+    margin-top: 12px;
+    }
+}
+
+// reguła dla textu komentarza //
+
+.modal__message{
+    width:100%;
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus{
+    outline:none;
+    border-color: var(--secondary-color);
+    }
+
+    &::placeholder{
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+//reguła dla polityki prywatności //
+
+.user-policy-message{
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    color: var(--forth-color);
+    padding-top:7px;
+    padding-bottom:31px;
+
+    &::before{
+    display: inline-block;
+    content: "";
+    height:15px;
+    width: 16px;
+    border: 2px solid;
+    border-radius: 3px;
+    border-color:var(--main-color);
+    }
+
+    .modal__policy:checked + &::before{
+    background-color: var(--secondary-color);
+    border:none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/icon-check.svg");
+    }
+}
+
+
+// --------------------------- TABLET ------------------------------ //
+
+@media screen and (min-width:768px) and (max-width: 1999px){
+
+.modal{
+    padding: 40px;
+
+    &__header{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 370px;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    }
+
+    &-button{
+    background-color: var(--secondary-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    color:var(--third-color);
+    border: none;
+    padding:0;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    padding:16px 76px;
+
+    &__label{
+
+    &:first-child{
+    color: var(--forth-color);
+
+    }
+}
+
+}
+
+}
+}
+
+// --------------------------- DESKTOP ------------------------------ //
+
+@media screen and (min-width:1200px){
+
+    .modal{
+    min-width: 528px;
+
+    &__header{
+    max-width: 448px;
+    }
+
+    &__close-btn:focus,
+    &__close-btn:hover{
+        fill: initial;
+    }
+}
+
+.user-policy-message{
+    font-size: 14px;
+    margin-left: 15px;
+
+    &::before{
+        margin-right: 8px;
+    }
+
+}
+}
+
+
+/*.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+// główne okno //
+
+.modal{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--third-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    min-width: 528px;
+    transition: transform 1s ease-out;
+    padding: 40px;
+
+    .is-hidden &{
+     transform: translate(-200%,-200%);
+    }
+
+    &__close-btn{
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: var(--third-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    padding: 9px 9px 10px 10px;
+    line-height: 0;
+    border-radius: 50%;
+    }
+
+
+    &__header{
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    }
+
+    &__form{
+    display: flex;
+    flex-direction: column;
+    }
+
+    &-button{
+    background-color: var(--secondary-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    color:var(--third-color);
+    border: none;
+    padding:0;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+        // ikona dla przycisku w footerze //
+        &__icon{
+        margin-left: 24px;
+        }
+
+    &--form{
+
+        padding-left: 76px;
+        padding-right: 76px;
+    }
+    
+    }
+
+    &__link{
+    color:var(--secondary-color);
+    }
+}
+
+// reguła dla wrappera //
+
+.modal-input-wrapper{
+    position: relative;
+    width:100%;
+
+    &__input{
+    width:100%;
+    padding-top:11px;
+    padding-bottom:11px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:focus{
+        outline:none;
+        border-color: var(--secondary-color);
+        }
+
+    }
+
+    &__icon{
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        .modal-input-wrapper__input:focus + &{
+        fill:var(--secondary-color);
+        }
+    }
+
+}
+
+
+// reguła dla opisu inputa //
+
+.modal__label{
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    color: var(--forth-color);
+    margin-bottom: 4px;
+    margin-top: 10px;
+
+    &:first-child{
+    margin-top: 12px;
+    }
+}
+
+// reguła dla textu komentarza //
+
+.modal__message{
+    width:100%;
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus{
+    outline:none;
+    border-color: var(--secondary-color);
+    }
+}
+
+//reguła dla polityki prywatności //
+
+.user-policy-message{
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    color: var(--forth-color);
+    width: 420px;
+    margin-left: 15px;
+    padding-top:20px;
+    padding-bottom:30px;
+
+    &::before{
+    display: inline-block;
+    content: "";
+    height:15px;
+    width: 16px;
+    border: 3px solid;
+    border-radius: 3px;
+    border-color:var(--main-color);
+    }
+
+    .modal__policy:checked + &::before{
+    background-color: var(--secondary-color);
+    border:none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/icon-check.svg");
+    }
+}
+*/

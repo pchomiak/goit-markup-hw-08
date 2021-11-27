@@ -1,0 +1,76 @@
+// --------------------------- MOBILE ------------------------------ //
+
+.container{
+    width: 100%;
+    padding: 0 15px;
+
+    &--hero-up{
+        padding-bottom:118px;
+        }
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 767px){
+    .container{
+        max-width: 480px;
+        margin: 0 auto;
+
+         &--hero-up{
+        padding-bottom:118px;
+        }
+    }
+}
+
+// --------------------------- TABLET ------------------------------ //
+
+@media screen and (min-width: 768px) and (max-width: 1999px){
+    .container{
+        max-width: 768px;
+
+    &--header{
+    display:flex;
+    justify-content: space-between;
+        }
+    }
+}
+
+// --------------------------- DESKTOP ------------------------------ //
+
+@media screen and (min-width: 1200px){
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+
+     &--hero-up{
+        padding-bottom:200px;
+            }
+
+    &--footer{
+    display: flex;
+    }
+        }
+    }
+
+/* .container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    &--header{
+    display:flex;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ECECEC;
+    }
+
+    &--hero-up{
+    padding-bottom:200px;
+    }
+    
+    &--footer{
+    display: flex;
+    }
+
+}
+*/

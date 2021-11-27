@@ -1,0 +1,126 @@
+// --------------------------- MOBILE ------------------------------ //
+
+.header{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.contact{
+    display:none;
+}
+
+// --------------------------- TABLET ------------------------------ //
+
+@media screen and (min-width:768px) and (max-width: 1999px){
+// reguły dla całego headera
+
+    .header{
+    padding-top: 18px;
+    padding-bottom: 18px;
+    }
+
+//reguły dla listy z formami kontaktu //
+
+    .contact{
+    display: flex;
+    flex-direction: column;
+    
+    &__item:first-child{
+        padding-bottom: 10px;
+    }
+
+    // reguły dla ikon w headerze //
+    .contact__icon{
+    margin-right: 8px;
+    }
+
+//reguły dla linków w headerze //
+    .contact__link{
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color:var(--forth-color);
+    text-decoration: none;
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,&:focus{
+        color:var(--secondary-color);
+        fill:var(--secondary-color);
+            }
+        }
+    }
+}
+
+// --------------------------- DESKTOP ------------------------------ //
+
+@media screen and (min-width: 1200px){
+
+// reguły dla całego headera
+
+    .header{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ECECEC;
+    }
+
+//reguły dla listy z formami kontaktu //
+
+.contact{
+flex-direction: row;
+align-items: center;
+column-gap: 30px;
+
+    &__item:first-child{
+        padding-bottom: 0px;
+    }
+}
+
+// reguły dla ikon w headerze //
+.contact__icon{
+    margin-right: 10px;
+}
+
+//reguły dla linków w headerze //
+.contact__link{
+font-size: 14px;
+
+    &:hover,&:focus{
+        color:var(--secondary-color);
+        fill:var(--secondary-color);
+    }
+}
+}
+
+/*
+//reguły dla listy z formami kontaktu //
+.contact{
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+
+// reguły dla ikon w headerze //
+.contact__icon{
+    margin-right: 10px;
+}
+
+//reguły dla linków w headerze //
+.contact__link{
+font-weight: 500;
+font-size: 14px;
+letter-spacing: 0.02em;
+color:var(--forth-color);
+text-decoration: none;
+transition-property: color, fill;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,&:focus{
+        color:var(--secondary-color);
+        fill:var(--secondary-color);
+    }
+}
+*/

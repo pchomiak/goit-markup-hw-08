@@ -1,0 +1,272 @@
+// --------------------------- MOBILE ------------------------------ //
+
+.footer-address{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+//reguły dla adresu w stopce //
+
+.footer-address__link{
+font-style: normal;
+font-size: 14px;
+letter-spacing: 0.03em;
+text-decoration: none;
+color:var(--third-color);
+}
+
+//reguły dla form kontanktu w stopce //
+
+.footer-address__contact{
+    color:var(--footer-color);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+
+    &:hover,&:focus{
+    color:var(--secondary-color);
+    fill:var(--secondary-color);
+    }
+}
+
+.footer-address__item{
+    margin-top: 8px;
+
+    &--postition{
+    margin-top: 20px;
+    }
+}
+
+// reguły dla listy mediów społecznościowych //
+.footer-social{
+    padding-top: 60px;
+
+    &__list{
+    display: flex;
+    justify-content: center;
+    }
+}
+
+.form-container{
+    padding-top: 60px;
+}
+
+//reguły dla imputa //
+
+.footer-imput{
+    width: 100%;
+    height:50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: var(--footer-bg-color);
+    border-radius: 4px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    padding-left: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    outline: none;
+}
+
+
+// reguł dla przycisku w footerze //
+.modal-button-footer{
+
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    padding: 13px 26px 13px 42px;
+}
+
+// --------------------------- TABLET ------------------------------ //
+
+@media screen and (min-width: 768px) and (max-width: 1999px){
+
+.footer-address{
+    position: absolute;
+    left: 76px;
+    }
+
+// reguły dla listy mediów społecznościowych //
+
+.footer-social{
+    padding-top: 0;
+    position: absolute;
+    right: 119px;
+}
+
+.footer-form{
+    display: flex;
+    justify-content: center;
+}
+
+
+//reguły dla imputa //
+
+.footer-imput{
+    width: 450px;
+}
+
+}
+
+// --------------------------- DESKTOP ------------------------------ //
+
+@media screen and (min-width: 1200px){
+
+.footer-address{
+    position: relative;
+    left: 0;
+    display: inline-block;
+
+    &__list{
+        display: inline-block;
+        }
+    }
+
+// modyfikatory dla elementów listy z adresami //
+
+.footer-address__item{
+    margin-top: 9px;
+
+    &--postition{
+    margin-top: 20px;
+    }
+}
+
+// reguły dla listy mediów społecznościowych //
+.footer-social{
+    position: initial;
+    display: inline-block;
+    padding-left: 70px;
+}
+
+.form-container{
+    padding-top: 0;
+}
+
+//reguły dla imputa //
+
+.footer-imput{
+    margin-left: 78px;
+    width: 358px;
+}
+
+// reguły dla wrappera trzymajacego wszystko związane z formularzami //
+.footer-wrapper{
+    position: relative;
+}
+
+// reguł dla przycisku w footerze //
+.modal-button-footer{
+    position: absolute;
+    margin-top: 0;
+    right:-210px;
+    top: 36px;
+}
+
+}
+
+
+
+
+/*
+//reguły dla adresu w stopce //
+.footer-address__link{
+font-style: normal;
+font-size: 14px;
+letter-spacing: 0.03em;
+text-decoration: none;
+color:var(--third-color);
+}
+
+//reguły dla form kontanktu w stopce //
+.footer-address__contact{
+    color:var(--footer-color);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+
+    &:hover,&:focus{
+    color:var(--secondary-color);
+    fill:var(--secondary-color);
+    }
+}
+
+// modyfikatory dla elementów listy z adresami //
+
+.footer-address__item{
+    margin-top: 9px;
+}
+
+.footer-address__item--postition{
+    width:246px;
+    margin-top: 20px;
+}
+
+
+// reguły dla listy mediów społecznościowych //
+.footer-social{
+    margin-left: 70px;
+    padding-top: 12px;
+
+    &__list{
+    display: flex;
+    }
+}
+
+//reguły dla imputa //
+
+.footer-imput{
+    margin-left: 78px;
+    width: 358px;
+    height:50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: var(--footer-bg-color);
+    border-radius: 4px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    padding-left: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    outline: none;
+}
+
+// reguły dla wrappera trzymajacego wszystko związane z formularzami //
+.footer-wrapper{
+    position: relative;
+}
+
+// reguł dla przycisku w footerze //
+.modal-button-footer{
+    position: absolute;
+    right:-210px;
+    top: 48px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.06em;
+    color: var(--third-color);
+    padding: 13px 26px 13px 42px;
+}
+*/

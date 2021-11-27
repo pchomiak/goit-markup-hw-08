@@ -1,0 +1,47 @@
+//reguły dla linku //
+
+.social-link{
+    width:44px;
+    height:44px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition-property: background-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus{
+    background-color:var(--secondary-color);
+    
+        .social-link__icon{
+            fill:var(--third-color);
+        }
+    }
+
+    &--footer{
+    background-color: rgba(255, 255, 255, 0.1);
+
+        &:hover, &:focus{
+        background-color: var(--secondary-color);
+        }
+    }
+
+}
+
+// reguły dla ikony //
+
+.social-link__icon{
+    width:20px;
+    height:20px;
+
+    &--employees{
+    fill: var(--icons-color);
+    }
+
+    &--footer{
+    fill:var(--third-color);
+    }
+}
+

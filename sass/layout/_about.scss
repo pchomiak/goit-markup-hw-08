@@ -1,0 +1,69 @@
+
+// --------------------------- DESKTOP ------------------------------ //
+
+@media screen and (min-width: 1200px){
+
+    .about__item{
+        position: relative;
+    }
+
+    .about-info{
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 3px;
+    width:370px;
+
+    &__text{
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color:var(--third-color);
+    }
+}
+
+//reguły dla listy //
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    }
+}
+
+
+/*
+
+//reguły dla tekstu //
+
+.about-info{
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 98px;
+    width:370px;
+
+    &__text{
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color:var(--third-color);
+    }
+}
+
+//reguły dla listy //
+
+.about{
+    display: flex;
+    justify-content: space-between;
+}
+*/

@@ -1,0 +1,22 @@
+// --------------------------- MOBILE I TABLET ------------------------------ //
+ @media screen and (max-width: 1999px){
+
+.secondary-header{
+font-weight: 700;
+font-size: 28px;
+letter-spacing: 0.03em;
+margin-bottom: 30px;
+text-align: center;
+
+}
+}
+
+// --------------------------- DESKTOP ------------------------------ //
+
+@media screen and (min-width:1200px){
+
+.secondary-header{
+font-size: 36px;
+margin-bottom: 50px;
+}
+}

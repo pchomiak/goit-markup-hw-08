@@ -1,0 +1,63 @@
+// --------------------------- MOBILE ------------------------------ //
+
+.logo{
+font-family: var(--secondary-font);
+font-weight: 700;
+font-size: 24px;
+letter-spacing: 0.03em;
+text-decoration: none;
+color:var(--secondary-color);
+
+    &--dark{
+    color:var(--main-color);
+    }
+
+    &--light{
+    color:var(--third-color);
+    }
+
+// --------------------------- TABLET ------------------------------ //
+
+@media screen and (min-width:768px) and (max-width: 1999px){
+     &--space{
+        margin-right: 83px;
+        }
+
+    }
+}
+
+// --------------------------- DESKTOP ------------------------------ //
+
+@media screen and (min-width:1200px){
+
+    .logo{
+    font-size: 26px;
+
+        &--space{
+        margin-right: 93px;
+        }
+
+    }
+}
+
+/*
+.logo{
+font-family: var(--secondary-font);
+font-weight: 700;
+font-size: 26px;
+letter-spacing: 0.03em;
+text-decoration: none;
+color:var(--secondary-color);
+
+    &--space{
+    margin-right: 94px;
+    }
+
+    &--dark{
+    color:var(--main-color);
+    }
+
+    &--light{
+    color:var(--third-color);
+    }
+}*/
